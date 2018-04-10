@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Request Header Parser Microservice</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="alert">
+        <h1>File Metadata Microservice</h1>
+    </div>
+    <div class="alert alert-info">
+        <h3>User stories:</h3>
+        <ol>
+            <li>I can submit a FormData object that includes a file upload.</li>
+            <li>When I submit something, I will receive the file size in bytes within the JSON response.</li>
+        </ol>
+    </div>
+
+    <div class="alert alert-warning">
+        <h3>Instructions</h3>
+        <p>Upload a file using the form below.</p>
+    </div>
+
+    <div class="alert">
+        <h3>Example output:</h3>
+        <p><code class="text-dark">{<br>
+            &ensp;"size": 1280<br>
+            }</code></p>
+    </div>
+
+    <div class="alert">
+        <h3>Upload file form</h3>
+        <form action="/get-file-size", method="POST">
+            <div class="form-group">
+                <input type="file" class="form-control" id="file" placeholder="Upload file">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
