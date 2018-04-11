@@ -37,9 +37,10 @@
 
     <div class="alert">
         <h3>Upload file form</h3>
-        <form action="/get-file-size", method="POST">
+        <form action="/get-file-size" method="POST" enctype="multipart/form-data">
             <div class="form-group">
-                <input type="file" class="form-control" id="file" placeholder="Upload file">
+                <input type="file" class="form-control" id="file" name="file" aria-describedby="fileHelp" placeholder="Upload file">
+                <small id="fileHelp" class="form-text text-muted">Must be under 10 mb.</small>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
